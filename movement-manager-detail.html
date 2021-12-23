@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Gestión de radios</title>
+</head>
+
+<body class="bg-light">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="me-2" src="assets/logo.png" alt="" width="24" height="24">
+                    DCT
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Tecnica
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./entrega-radios.html">Entregar - recibir radios</a></li>
+                                <li><a class="dropdown-item" href="./info-radio.html">Consulta de radios</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./subcargos.html">Subcargos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./movement-manager.html">Gestión de radios</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Reportes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./create-groups.html">Crear grupos</a></li>
+                                <li><a class="dropdown-item" href="./reports.html">Nuevo reporte</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Bases de datos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./type-radio.html">Tipos de radios</a></li>
+                                <li><a class="dropdown-item" href="./radio-list.html">Radios</a></li>
+                                <li><a class="dropdown-item" href="./dependencias-list.html">Dependencias</a></li>
+                                <li><a class="dropdown-item" href="./users.html">Usuarios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Administrador
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="subnavbar py-2" aria-label="Secondary Navigation">
+            <div class="container d-flex justify-content-between align-items-center collapse navbar-collapse" id="secondaryDropdown">
+                <h1 class="display-6">Gestión de radios</h1>
+            </div>
+          </nav>
+    </header>
+    <!-- contenido -->
+    <div class="container py-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="row gap-2">
+                    <div class="col-12 col-lg-4">
+                        <div class="card border-info h-100">
+                            <ul class="list-group list-group-flush h-100 d-flex justify-content-md-around">
+                                <li class="list-group-item">
+                                    <div class="form-group">
+                                        <label for="tipo" class="form-label">Tipo de movimiento</label>
+                                        <select class="form-select" id="tipo" disabled>
+                                            <option>Seleccione tipo de movimiento</option>
+                                            <option selected value="1">Asignación</option>
+                                            <option value="2">Devolución</option>
+                                            <option value="3">Préstamo</option>
+                                            <option value="4">Ingreso para reparación</option>
+                                            <option value="5">Entrega de equipo reparado</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="depList" class="form-label">Dependencia</label>
+                                        <input class="form-control" id="depList" placeholder="Ingrese la dependencia..." value="825 - Departamento SERVICIOS TECNICOS" disabled>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-group">
+                                        <label for="radioList" class="form-label">Radio</label>
+                                        <input class="form-control" list="radiolistOptions" id="radioList"
+                                            placeholder="Ingrese el radio...">
+                                        <datalist id="radiolistOptions">
+                                            <option value="426CRK0000 Motorola APX-2000">
+                                            <option value="426CRK0001 Motorola APX-2000">
+                                            <option value="426CRK0002 Motorola APX-2000">
+                                            <option value="426CRK0003 Motorola APX-2000">
+                                        </datalist>
+                                    </div>
+                                    <div class="d-grid d-lg-flex justify-content-lg-center py-2">
+                                        <button type="button" class="btn btn-lg btn-primary"><i class="bi bi-plus"></i>
+                                            Agregar</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Marca</th>
+                                                <th scope="col">Modelo</th>
+                                                <th scope="col">Serie</th>
+                                                <th scope="col">Alias</th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">11</th>
+                                                <td>Motorola</td>
+                                                <td>APX-2000</td>
+                                                <td>426CRK0001</td>
+                                                <td>ENLACES-R01</td>
+                                                <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">12</th>
+                                                <td>Motorola</td>
+                                                <td>APX-2000</td>
+                                                <td>426CRK0002</td>
+                                                <td>ENLACES-R02</td>
+                                                <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">13</th>
+                                                <td>Motorola</td>
+                                                <td>APX-2000</td>
+                                                <td>426CRK0003</td>
+                                                <td>ENLACES-R03</td>
+                                                <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">14</th>
+                                                <td>Motorola</td>
+                                                <td>APX-2000</td>
+                                                <td>426CRK0004</td>
+                                                <td>ENLACES-R04</td>
+                                                <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">15</th>
+                                                <td>Motorola</td>
+                                                <td>APX-2000</td>
+                                                <td>426CRK0005</td>
+                                                <td>ENLACES-R05</td>
+                                                <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="py-2">
+                                        <nav aria-label="navigator">
+                                            <ul class="pagination">
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button class="btn btn-success">Aprobar</button>
+                                <button class="btn btn-danger">Desechar</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

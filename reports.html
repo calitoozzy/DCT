@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Reportes</title>
+</head>
+
+<body class="bg-light">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="me-2" src="assets/logo.png" alt="" width="24" height="24">
+                    DCT
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown link
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </nav>
+        <nav class="subnavbar py-2" aria-label="Secondary Navigation">
+            <div class="container d-flex justify-content-between align-items-center collapse navbar-collapse"
+                id="secondaryDropdown">
+                <h1 class="display-6">Reportes</h1>
+            </div>
+        </nav>
+    </header>
+    <!-- contenido -->
+    <div class="container py-4">
+        <div class="row gap-2">
+            <div class="col-12 col-md-5 order-md-1">
+                <div class="card">
+                    <div class="card-header">Filtro de dependencias</div>
+                    <div class="card-body">
+                        <div class="input-group form-group mb-3">
+                            <input class="form-control" list="depOptions" id="depList"
+                                placeholder="Ingrese la dependencia...">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">+</button>
+                            <datalist id="depOptions">
+                                <option value="DEP - Depósito DCT">
+                                <option value="843 - División COMUNICACIONES TRONCALIZADAS">
+                                <option value="800 - Sup. FED. DE TEC. DE LA INF. Y COMUNICACIONES">
+                                <option value="825 - Departamento SERVICIOS TECNICOS">
+                            </datalist>
+                        </div>
+                        <div class="input-group form-group">
+                            <input class="form-control" list="groupOptions" id="depList"
+                                placeholder="Ingrese el grupo...">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">+</button>
+                            <datalist id="groupOptions">
+                                <option value="COMUNICACIONES">
+                                <option value="GRUPOS ESPECIALES">
+                                <option value="DUOFS">
+                            </datalist>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 order-md-3">
+                <div class="card">
+                    <div class="card-header">Filtro de radios</div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="input-group mb-3">
+                                <select id="modelos" class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccione el modelo</option>
+                                    <option value="1">Motorola APX-2000</option>
+                                    <option value="2">Motorola APX-5000</option>
+                                </select>
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">+</button>
+                            </div>
+                            <div class="input-group mb-3">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccione el estado</option>
+                                    <option value="1">En servicio</option>
+                                    <option value="2">En reparación</option>
+                                </select>
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">+</button>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" checked>
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Todos
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Es cargo
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault3">
+                                <label class="form-check-label" for="flexRadioDefault3">
+                                    No es cargo
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 order-md-2">
+                <h6 class="h6">Dependencias o grupos:</h6>
+                <div class="chip text-wrap">
+                    <span>843 - Div.COMUNICACIONES TRONCALIZADAS</span>
+                    <button type="button" class="btn-close"></button>
+                </div>
+                <div class="chip">
+                    <span>DUOFS</span>
+                    <button type="button" class="btn-close"></button>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 py-2 order-md-4">
+                <h6 class="h6">Filtros aplicados</h6>
+                <div class="chip">
+                    <span>APX-2000</span>
+                    <button type="button" class="btn-close"></button>
+                </div>
+                <div class="chip">
+                    <span>APX-5000</span>
+                    <button type="button" class="btn-close"></button>
+                </div>
+                <div class="chip">
+                    <span>En servicio</span>
+                    <button type="button" class="btn-close"></button>
+                </div>
+                <div class="chip">
+                    <span>En reparación</span>
+                    <button type="button" class="btn-close"></button>
+                </div>
+            </div>
+            <div class="order-md-5 py-4">
+                <div class="d-grid d-md-block text-center">
+                    <button class="btn btn-lg btn-primary">Obtener reporte</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

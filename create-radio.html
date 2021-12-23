@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
@@ -30,37 +31,82 @@
                     <img class="me-2" src="assets/logo.png" alt="" width="24" height="24">
                     DCT
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!--                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown link
+                                Tecnica
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="./entrega-radios.html">Entregar - recibir radios</a></li>
+                                <li><a class="dropdown-item" href="./info-radio.html">Consulta de radios</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./subcargos.html">Subcargos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./movement-manager.html">Gestión de radios</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Reportes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./create-groups.html">Crear grupos</a></li>
+                                <li><a class="dropdown-item" href="./reports.html">Nuevo reporte</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Bases de datos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./type-radio.html">Tipos de radios</a></li>
+                                <li><a class="dropdown-item" href="./radio-list.html">Radios</a></li>
+                                <li><a class="dropdown-item" href="./dependencias-list.html">Dependencias</a></li>
+                                <li><a class="dropdown-item" href="./users.html">Usuarios</a></li>
                             </ul>
                         </li>
                     </ul>
-                </div> -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Administrador
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
+        <nav class="subnavbar py-2" aria-label="Secondary Navigation">
+            <div class="container d-flex justify-content-between align-items-center">
+                <h1 class="display-6">Radios</h1>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Crear</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Ver lista</a>
+                    </li>
+                  </ul>
+            </div>
+          </nav>
     </header>
     <!-- contenido -->
     <main>
@@ -71,7 +117,7 @@
                     <h4 class="mb-3">Nuevos radios</h4>
                     <form class="row g-3">
                         <!-- MODELOS -->
-                        <div class="form-floating col-md-6 mb-3">
+                        <div class="form-floating col-md-4 mb-3">
                             <select class="form-select" id="floatingSelect">
                                 <option selected>Seleccione el tipo de radio</option>
                                 <option value="1">Motorola APX-2000 - Portátil</option>
@@ -81,13 +127,29 @@
                             </select>
                             <label for="floatingSelect">Modelo y tipo de radio</label>
                         </div>
-                        <div class="form-floating col-md-6 mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <div class="form-floating col-md-4 mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="some">
                             <label for="floatingInput">Número de serie</label>
                         </div>
+                        <div class="form-floating col-md-4 mb-3">
+                            <input class="form-control" list="datalistOptions" id="dataList" placeholder="Type to search...">
+                            <label for="dataList" class="form-label">Dependencia</label>
+                            <datalist id="datalistOptions">
+                                <option value="DEP - Depósito DCT">
+                                <option value="843 - División COMUNICACIONES TRONCALIZADAS">
+                                <option value="800 - Sup. FED. DE TEC. DE LA INF. Y COMUNICACIONES">
+                                <option value="825 - Departamento SERVICIOS TECNICOS">
+                            </datalist>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Es Cargo Patrimonial
+                            </label>
+                          </div>
                         <div class="col-12 d-flex justify-content-end">
                             <button type="submit" class="btn btn-primary">
-                                 Agregar
+                                Agregar
                             </button>
                         </div>
                     </form>
@@ -101,50 +163,60 @@
                     <!-- <h4 class="text-center">No hay radios para agregar.</h4>-->
                     <table class="table">
                         <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Tipo de radio</th>
-                            <th scope="col">Numero de serie</th>
-                            <th scope="col">Dependencia</th>
-                          </tr>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Tipo de radio</th>
+                                <th scope="col">Numero de serie</th>
+                                <th scope="col">Dependencia</th>
+                                <th scope="col">Es cargo</th>
+                                <th scope="col"></th>
+                            </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Motorola APX-2000 - Portátil</td>
-                            <td>426CRK0258</td>
-                            <td>Deposito DCT</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Motorola APX-2000 - Portátil</td>
-                            <td>426CRK0259</td>
-                            <td>Deposito DCT</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Motorola APX-2000 - Portátil</td>
-                            <td>426CRK0260</td>
-                            <td>Deposito DCT</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">4</th>
-                            <td>Motorola APX-2000 - Portátil</td>
-                            <td>426CRK0261</td>
-                            <td>843 -División COMUNICACIONES TRONCALIZADAS</td>
-                          </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Motorola APX-2000 - Portátil</td>
+                                <td>426CRK0258</td>
+                                <td>Deposito DCT</td>
+                                <td>Si</td>
+                                <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Motorola APX-2000 - Portátil</td>
+                                <td>426CRK0259</td>
+                                <td>Deposito DCT</td>
+                                <td>Si</td>
+                                <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Motorola APX-2000 - Portátil</td>
+                                <td>426CRK0260</td>
+                                <td>Deposito DCT</td>
+                                <td>No</td>
+                                <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Motorola APX-2000 - Portátil</td>
+                                <td>426CRK0261</td>
+                                <td>843 -División COMUNICACIONES TRONCALIZADAS</td>
+                                <td>Si</td>
+                                <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+                            </tr>
                         </tbody>
-                      </table>
-                      <div class="row">
-                          <div class="col-12 d-flex justify-content-center">
-                              <button type="submit" class="btn btn-success me-2">
-                                  Guardar
-                             </button>
-                              <button type="submit" class="btn btn-light">
-                                  Volver
-                             </button>
-                          </div>
-                      </div>
+                    </table>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success me-2">
+                                Guardar
+                            </button>
+                            <button type="submit" class="btn btn-light">
+                                Volver
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

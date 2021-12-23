@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Gestión de radios</title>
+</head>
+
+<body class="bg-light">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="me-2" src="assets/logo.png" alt="" width="24" height="24">
+                    DCT
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Tecnica
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./entrega-radios.html">Entregar - recibir radios</a></li>
+                                <li><a class="dropdown-item" href="./info-radio.html">Consulta de radios</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./subcargos.html">Subcargos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./movement-manager.html">Gestión de radios</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Reportes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./create-groups.html">Crear grupos</a></li>
+                                <li><a class="dropdown-item" href="./reports.html">Nuevo reporte</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Bases de datos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./type-radio.html">Tipos de radios</a></li>
+                                <li><a class="dropdown-item" href="./radio-list.html">Radios</a></li>
+                                <li><a class="dropdown-item" href="./dependencias-list.html">Dependencias</a></li>
+                                <li><a class="dropdown-item" href="./users.html">Usuarios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Administrador
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="subnavbar py-2" aria-label="Secondary Navigation">
+            <div class="container d-flex justify-content-between align-items-center collapse navbar-collapse"
+                id="secondaryDropdown">
+                <h1 class="display-6">Gestión de radios</h1>
+                <div class="w-auto input-group">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    <input type="search" class="form-control form-control-lg" placeholder="Buscar...">
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- contenido -->
+    <div class="container py-4">
+        <div class="card">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Pendientes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Aprobados</a>
+                </li>
+              </ul>
+            <div class="card-body">
+                
+                <div class="card">
+                    <ul class="list-group list-group-flush h-100 d-flex justify-content-md-around">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h6 class="card-title h6">800 -Superintendencia FEDERAL DE TECNOLOGIAS DE LA INFORMACIÓN Y
+                                        COMUNICACIONES</h6>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-flex justify-content-end">
+                                        <span class="badge rounded-pill bg-primary">Entrega</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center justify-content-md-end">
+                                    <p class="text-muted">Fecha: 23/11/2021</p>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            XTS-2250
+                                            <span class="badge bg-primary rounded-pill">14</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            APX-2000
+                                            <span class="badge bg-primary rounded-pill">2</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            APX-5000
+                                            <span class="badge bg-primary rounded-pill">1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div
+                                        class="h-100 py-2 d-flex justify-content-center justify-content-md-end align-items-md-center">
+                                        <button class="btn btn-primary">Ver detalle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h6 class="card-title h6">1 -JEFATURA</h6>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-flex justify-content-end">
+                                        <span class="badge rounded-pill bg-warning">Devolución</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center justify-content-md-end">
+                                    <p class="text-muted">Fecha: 20/11/2021</p>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            APX-2000
+                                            <span class="badge bg-primary rounded-pill">10</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div
+                                        class="h-100 py-2 d-flex justify-content-center justify-content-md-end align-items-md-center">
+                                        <button class="btn btn-primary">Ver detalle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h6 class="card-title h6">10 -SUBJEFATURA</h6>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-flex justify-content-end">
+                                        <span class="badge rounded-pill bg-secondary">Préstamo</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center justify-content-md-end">
+                                    <p class="text-muted">Fecha: 20/11/2021</p>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            APX-2000
+                                            <span class="badge bg-primary rounded-pill">10</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div
+                                        class="h-100 py-2 d-flex justify-content-center justify-content-md-end align-items-md-center">
+                                        <button class="btn btn-primary">Ver detalle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--Pagination-->
+                <div class="py-4">
+                    <nav aria-label="Radio navigation ">
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Siguiente</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

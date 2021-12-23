@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Crear radio</title>
+</head>
+
+<body class="bg-light">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="me-2" src="assets/logo.png" alt="" width="24" height="24">
+                    DCT
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Tecnica
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./entrega-radios.html">Entregar - recibir radios</a></li>
+                                <li><a class="dropdown-item" href="./info-radio.html">Consulta de radios</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./subcargos.html">Subcargos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./movement-manager.html">Gestión de radios</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Reportes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./create-groups.html">Crear grupos</a></li>
+                                <li><a class="dropdown-item" href="./reports.html">Nuevo reporte</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Bases de datos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="./type-radio.html">Tipos de radios</a></li>
+                                <li><a class="dropdown-item" href="./radio-list.html">Radios</a></li>
+                                <li><a class="dropdown-item" href="./dependencias-list.html">Dependencias</a></li>
+                                <li><a class="dropdown-item" href="./users.html">Usuarios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Administrador
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="subnavbar py-2" aria-label="Secondary Navigation">
+            <div class="container d-flex-column d-md-flex justify-content-md-between">
+                <h1 class="display-6">Programación de radios</h1>
+            </div>
+        </nav>
+    </header>
+    <!-- contenido -->
+    <div class="container py-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="row mb-3 text-center">
+                    <div class="col-4">
+                        <button type="button" class="btn btn-light">
+                            <span class="badge bg-info">1</span> Selección de radios
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="btn btn-light">
+                            <span class="badge bg-info">2</span> Datos de radio
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="btn btn-primary">
+                            <span class="badge bg-secondary">3</span> Carga en sistenas
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="h6">Radios seleccionados</h6>
+                        <div class="table-responsive">
+                            <table class="table table-striped text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="align-middle" rowspan="2">#</th>
+                                        <th scope="col" class="align-middle" rowspan="2">Marca</th>
+                                        <th scope="col" class="align-middle" rowspan="2">Modelo</th>
+                                        <th scope="col" class="align-middle"rowspan="2">Serie</th>
+                                        <th scope="col" class="align-middle"rowspan="2">Alias</th>
+                                        <th scope="col" class="align-middle"rowspan="2">ID</th>
+                                        <th scope="col" class="align-middle"rowspan="2">Version de Firmware</th>
+                                        <th scope="col" class="align-middle"colspan="2">Sistemas</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">PM</th>
+                                        <th scope="col">UNS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Motorola</td>
+                                        <td>APX-2000</td>
+                                        <td>426CRK0001</td>
+                                        <td>ENLACES-R01</td>
+                                        <td>55011</td>
+                                        <td>16.01</td>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Motorola</td>
+                                        <td>APX-2000</td>
+                                        <td>426CRK0002</td>
+                                        <td>ENLACES-R02</td>
+                                        <td>55012</td>
+                                        <td>16.01</td>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Motorola</td>
+                                        <td>APX-2000</td>
+                                        <td>426CRK0003</td>
+                                        <td>ENLACES-R03</td>
+                                        <td>55013</td>
+                                        <td>16.01</td>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Motorola</td>
+                                        <td>APX-2000</td>
+                                        <td>426CRK0004</td>
+                                        <td>ENLACES-R04</td>
+                                        <td>55015</td>
+                                        <td>16.01</td>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Motorola</td>
+                                        <td>APX-2000</td>
+                                        <td>426CRK0005</td>
+                                        <td>ENLACES-R05</td>
+                                        <td>55016</td>
+                                        <td>16.01</td>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="text-end">
+                    <button class="btn btn-success">Finalizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
